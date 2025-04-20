@@ -1,0 +1,717 @@
+:root {
+    --primary-color: #FF69B4;
+    /* 由绿色改为粉红色 */
+    --secondary-color: #FF1493;
+    /* 由深绿色改为深粉色 */
+    --background-color: #FFF0F5;
+    /* 改为浅粉色背景 */
+    --text-color: #333;
+    --text-light: #666;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(255, 105, 180, 0.1);
+    /* 阴影也改为粉色 */
+    --radius: 12px;
+    --transition: all 0.3s ease;
+
+    /* 添加 Element Plus 主题变量 */
+    --el-color-primary: var(--primary-color) !important;
+    --el-color-primary-light-1: #FF83C1 !important;
+    --el-color-primary-light-2: #FF9DCE !important;
+    --el-color-primary-light-3: #FFB7DB !important;
+    --el-color-primary-light-4: #FFD1E8 !important;
+    --el-color-primary-light-5: #FFEBF5 !important;
+    --el-color-primary-light-6: #FFF0F7 !important;
+    --el-color-primary-light-7: #FFF5FA !important;
+    --el-color-primary-light-8: #FFFAFC !important;
+    --el-color-primary-light-9: #FFFDFE !important;
+    --el-color-primary-dark-1: var(--secondary-color) !important;
+
+    /* Element Plus 组件相关变量 */
+    --el-border-radius-base: var(--radius) !important;
+    --el-border-color: #FFE4E1 !important;
+    --el-border-color-light: var(--background-color) !important;
+    --el-text-color-primary: var(--text-color) !important;
+    --el-text-color-regular: var(--text-light) !important;
+
+    /* 按钮相关 */
+    --el-button-hover-bg-color: var(--secondary-color) !important;
+    --el-button-hover-border-color: var(--secondary-color) !important;
+
+
+    /* 添加 Element Plus 组件的自定义样式 */
+    /* 按钮样式 */
+    .el-button--primary {
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+    }
+
+    .el-button--primary:hover {
+        background-color: var(--secondary-color) !important;
+        border-color: var(--secondary-color) !important;
+    }
+
+    /* 导航菜单样式 */
+    .el-menu--horizontal>.el-menu-item.is-active {
+        color: var(--primary-color) !important;
+        border-bottom-color: var(--primary-color) !important;
+    }
+
+    /* 下拉菜单样式 */
+    .el-dropdown-menu__item:hover {
+        background-color: var(--background-color) !important;
+        color: var(--primary-color) !important;
+    }
+
+    /* 对话框样式 */
+    .el-dialog {
+        border-radius: var(--radius) !important;
+    }
+    /*
+    .el-dialog__header {
+        background-color: var(--background-color) !important;
+        border-radius: var(--radius) var(--radius) 0 0 !important;
+    }
+*/
+    /* 输入框样式 */
+    .el-input__inner:focus {
+        border-color: var(--primary-color) !important;
+    }
+
+    /* 表单验证状态 */
+    .el-form-item.is-success .el-input__inner {
+        border-color: var(--primary-color) !important;
+    }
+
+    /* 头像样式 */
+    .el-avatar {
+        border: 2px solid var(--primary-color) !important;
+
+    }
+
+    /* 补充表单相关样式 */
+    .el-checkbox__input.is-checked .el-checkbox__inner {
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+    }
+
+    .el-radio__input.is-checked .el-radio__inner {
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+    }
+
+    /* 补充开关样式 */
+    .el-switch.is-checked .el-switch__core {
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+    }
+
+    /* 补充标签页样式 */
+    .el-tabs__item.is-active {
+        color: var(--primary-color) !important;
+    }
+
+    .el-tabs__active-bar {
+        background-color: var(--primary-color) !important;
+    }
+
+    /* 补充分页样式 */
+    .el-pagination.is-background .el-pager li:not(.disabled).active {
+        background-color: var(--primary-color) !important;
+    }
+
+    /* 补充选择器样式 */
+    .el-select-dropdown__item.selected {
+        color: var(--primary-color) !important;
+    }
+
+    /* 补充日期选择器样式 */
+    .el-date-table td.current:not(.disabled) span {
+        background-color: var(--primary-color) !important;
+    }
+
+    /* 补充上传组件样式 */
+    .el-upload:hover {
+        border-color: var(--primary-color) !important;
+    }
+
+    .el-upload-list__item.is-success .el-upload-list__item-name {
+        color: var(--primary-color) !important;
+    }
+
+    /* 补充消息提示样式 */
+    .el-message--success {
+        background-color: var(--el-color-primary-light-9) !important;
+        border-color: var(--el-color-primary-light-7) !important;
+    }
+
+    .el-message--success .el-message__content {
+        color: var(--primary-color) !important;
+    }
+
+    /* 补充加载样式 */
+    .el-loading-spinner .el-loading-text {
+        color: var(--primary-color) !important;
+    }
+
+    .el-loading-spinner .path {
+        stroke: var(--primary-color) !important;
+    }
+
+    /* 补充进度条样式 */
+    .el-progress-bar__inner {
+        background-color: var(--primary-color) !important;
+    }
+
+    /* 补充树形控件样式 */
+    .el-tree-node.is-current>.el-tree-node__content {
+        color: var(--primary-color) !important;
+        background-color: var(--el-color-primary-light-9) !important;
+    }
+
+    /* 补充级联选择器样式 */
+    .el-cascader-node.in-active-path,
+    .el-cascader-node.is-active,
+    .el-cascader-node.is-selectable.in-checked-path {
+        color: var(--primary-color) !important;
+    }
+
+    /* 补充时间线样式 */
+    .el-timeline-item__node--primary {
+        background-color: var(--primary-color) !important;
+    }
+
+    /* 补充穿梭框样式 */
+    .el-transfer-panel__item.el-checkbox.is-checked {
+        color: var(--primary-color) !important;
+    }
+
+    /* 补充评分样式 */
+    .el-rate__item.hover .el-rate__icon,
+    .el-rate__item .el-rate__icon.hover {
+        color: var(--primary-color) !important;
+    }
+
+    /* 补充步骤条样式 */
+    .el-step__head.is-process,
+    .el-step__head.is-finish {
+        color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+    }
+
+    .el-step__title.is-process,
+    .el-step__title.is-finish {
+        color: var(--primary-color) !important;
+    }
+
+    /* 补充骨架屏样式 */
+    .el-skeleton__item {
+        background: var(--el-color-primary-light-8) !important;
+    }
+
+    /* 补充徽章样式 */
+    .el-badge__content {
+        background-color: var(--primary-color) !important;
+    }
+
+    /* 补充气泡确认框样式 */
+    .el-popconfirm__main {
+        color: var(--text-color) !important;
+    }
+
+    /* 补充滑块样式 */
+    .el-slider__bar {
+        background-color: var(--primary-color) !important;
+    }
+
+    .el-slider__button {
+        border-color: var(--primary-color) !important;
+    }
+
+    /* 全局过渡动画 */
+    .el-fade-in-linear-enter-active,
+    .el-fade-in-linear-leave-active {
+        transition: opacity 0.2s linear !important;
+    }
+
+    /* 卡片样式 */
+    .el-card {
+        border-radius: var(--radius) !important;
+        box-shadow: var(--shadow) !important;
+    }
+
+    .el-card:hover {
+        box-shadow: 0 4px 16px rgba(255, 105, 180, 0.15) !important;
+    }
+
+    /* 表格样式 */
+    .el-table thead th {
+        background-color: var(--el-color-primary-light-9) !important;
+    }
+
+    .el-table--striped .el-table__body tr.el-table__row--striped td {
+        background-color: var(--el-color-primary-light-9) !important;
+    }
+
+    /* 禁用状态统一样式 */
+    .is-disabled {
+        opacity: 0.7 !important;
+    }
+
+    .menu-link {
+        text-decoration: none;
+        /* 移除下划线 */
+        color: inherit;
+        /* 继承父级颜色 */
+        display: block;
+        /* 确保占满整个菜单项 */
+    }
+}
+
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* 英雄区域样式 */
+.hero {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 主容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 上传容器样式 */
+.upload-container {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-top: -4rem;
+    position: relative;
+}
+
+/* 上传方式容器样式 */
+.upload-methods {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 每个上传方式的容器 */
+.method-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 方式标题 */
+.method-title {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* 上传区域样式 */
+.upload-area {
+    flex: 1;
+    border: 2px dashed #FFB6C1;
+    /* 改为浅粉色虚线边框 */
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    min-height: 300px;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: #FFF0F5;
+    /* 悬停时显示浅粉色背景 */
+}
+
+/* 摄像头区域样式 */
+.camera-area {
+    flex: 1;
+    border: 2px dashed #FFB6C1;
+    /* 同样改为浅粉色虚线边框 */
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+/* 内容样式 */
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.camera-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.upload-content i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+/* 摄像头预览区域 */
+.camera-preview {
+    flex: 1;
+    background-color: #FFF0F5;
+    /* 改为浅粉色背景 */
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.camera-preview video,
+.camera-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.camera-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* 按钮样式 */
+.camera-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.camera-btn,
+.upload-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.camera-btn:hover,
+.upload-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.camera-btn:disabled {
+    background-color: #FFB6C1;
+    /* 禁用状态改为浅粉色 */
+    cursor: not-allowed;
+}
+
+.upload-hint {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* 结果容器样式 */
+.result-container {
+    margin-top: 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    width: 100%;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.image-section {
+    text-align: center;
+}
+
+.image-preview {
+    margin-top: 1rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-section {
+    padding: 1rem;
+}
+
+/* 加载动画 */
+.loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #FFE4E1;
+    /* 改为浅粉色边框 */
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 结果详情样式 */
+.flower-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.scientific-name {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+/* 置信度条样式 */
+.confidence-section {
+    margin: 2rem 0;
+}
+
+.confidence-bar {
+    margin: 1rem 0;
+}
+
+.confidence-bar label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #FFE4E1;
+    /* 改为浅粉色背景 */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+/* 花卉详情样式 */
+.flower-details {
+    margin-top: 2rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #FFF0F5;
+    /* 改为浅粉色背景 */
+    border-radius: var(--radius);
+}
+
+.detail-item i {
+    color: var(--primary-color);
+}
+
+/* 分享按钮 */
+.share-btn {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.share-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 特性部分 */
+.features {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background-color: #FFF0F5;
+    /* 悬停时显示浅粉色背景 */
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .upload-methods {
+        flex-direction: column;
+    }
+
+    .method-box {
+        width: 100%;
+    }
+
+    .result-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .camera-buttons {
+        flex-direction: column;
+    }
+
+    .camera-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .upload-container {
+        margin-top: -2rem;
+        padding: 1rem;
+    }
+}
